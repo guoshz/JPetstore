@@ -1,0 +1,8 @@
+jpetstore:
+  image: registry.wise2c.com/wise2c-demo/demo:dev-${BUILD_NUMBER}
+  stdin_open: true
+  tty: true
+  ports:
+  - 9292:8080/tcp
+  labels:
+    io.rancher.scheduler.affinity:host_label: jpetstore=demo
